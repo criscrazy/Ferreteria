@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.Ferre',
+    'import_export',
 ]
 
 MIDDLEWARE = [
@@ -74,13 +75,19 @@ WSGI_APPLICATION = 'Ferreteria.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-"""
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'Ferreteria',
+        'USER': 'CrisCrazy',
+        'PASSWORD': '1313',
+        'HOST': 'localhost',
+        'PORT': 5432,
     }
 }
+
+
 """
 import dj_database_url
 from decouple import config
@@ -90,6 +97,8 @@ DATABASES = {
         default=config('DATABASE_URL')
     )
 }
+"""
+
 
 
 # Password validation
