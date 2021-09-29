@@ -30,6 +30,9 @@
     <!-- Main style sheet -->
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
+    <!-- main by CrisCrazy-->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
     <!-- Google Font -->
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
@@ -98,9 +101,11 @@
                 <a href="{%url 'Ferre:index'%}">
                   <img height="80" width="80" src="{% static 'img/logo2.jpg' %}" alt="">
                 </a>
-                <a href="{%url 'Ferre:index'%}">
-                  <p><span>Distribuidora El Castor</span></p>
-                </a>
+                <div>
+                  <a href="{%url 'Ferre:index'%}">
+                   <p><span>Distribuidora El Castor</span></p>
+                  </a>
+                </div>
                 <!-- img based logo -->
 
                 <!-- <a href="index.html"><img src="img/logo.jpg" alt="logo img"></a> -->
@@ -260,21 +265,12 @@
   </section>
   <!--end slider -->
 
-   <div class="tm-paging-links">
-				<nav>
-					<ul>
-                        <!-- cambiar nombres -->
-						<li class="tm-paging-item"><a href="#" class="tm-paging-link active">Herramientas</a></li>
-						<li class="tm-paging-item"><a href="#" class="tm-paging-link">Plomeria</a></li>
-						<li class="tm-paging-item"><a href="#" class="tm-paging-link">Accesorios</a></li>
-					</ul>
-				</nav>
+   <div id="GAleria" class="tm-paging-links">
 			</div>
-
 			<!-- Gallery -->
 			<div class="row tm-gallery">
 				<!-- gallery page 1 -->
-				<div id="tm-gallery-page-Herramientass" class="tm-gallery-page">
+				<div id="tm-gallery-page-Herramientass" class="">
 					{%if allproduct%}
 					{%for arrayproduct in allproduct%}
 					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
