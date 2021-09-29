@@ -6,6 +6,7 @@ class producto(models.Model):
     name = models.CharField(max_length=9, null=False, blank=False)
     description = models.TextField(null=False,blank=False)
     price = models.DecimalField(null=False, max_digits=8, decimal_places=2)
+    img = models.URLField(max_length=8000, blank=False, null=False,  default='https://i.postimg.cc/Hk439n1v/no-found.jpg')
 
     class Meta:
         verbose_name = 'producto'

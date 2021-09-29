@@ -319,6 +319,7 @@
     </div>
   </section>
   <!-- / menu -->
+
   <!-- Start slider -->
   <section id="aa-slider">
     <div class="aa-slider-area">
@@ -395,7 +396,55 @@
       </div>
     </div>
   </section>
-  <!-- / slider -->
+  <!--end slider -->
+
+   <div class="tm-paging-links">
+				<nav>
+					<ul>
+                        <!-- cambiar nombres -->
+						<li class="tm-paging-item"><a href="#" class="tm-paging-link active">Herramientas</a></li>
+						<li class="tm-paging-item"><a href="#" class="tm-paging-link">T</a></li>
+						<li class="tm-paging-item"><a href="#" class="tm-paging-link">Postres</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<!-- Gallery -->
+			<div class="row tm-gallery">
+				<!-- gallery page 1 -->
+				<div id="tm-gallery-page-Herramientass" class="tm-gallery-page">
+					{%if allproduct%}
+					{%for arrayproduct in allproduct%}
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+
+							<img src="{{arrayproduct.img}}" height="200px" class="tm-gallery-img"/>
+							<figcaption>
+								<h4 class="tm-gallery-title">{{arrayproduct.name}}</h4>
+								<p class="tm-gallery-description">{{arrayproduct.description}}</p>
+								<p class="tm-gallery-price">{{arrayproduct.price}}</p>
+							</figcaption>
+						</figure>
+					</article>
+					{%endfor%}
+					{%else%}
+					<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+                          <!-- cambiar imagen Crazy-->
+							<img src="https://i.postimg.cc/655YfRh7/nofoto-Gxik-WQE.png" alt="Image" height="200px" class="tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title">Producto Agotado</h4>
+								<p class="tm-gallery-description">Mis mas sinseras disculpas, si lo conseguimos le llamamos :3</p>
+								<p class="tm-gallery-price">--</p>
+							</figcaption>
+						</figure>
+					</article>
+				{%endif%}
+				</div>
+
+
+
+
 
   <!-- Subscribe section -->
   <section id="aa-subscribe">
